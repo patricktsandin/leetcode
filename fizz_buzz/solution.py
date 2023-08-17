@@ -1,6 +1,6 @@
 class Solution:
     """Solves fizzbuzz in O(n) time and space complexity."""
-    def fizzBuzz(self, n: int) -> List[str]:
+    def fizzBuzz(self, n):
         result = []
         for integer in range(1, n + 1):
             if integer % 15 == 0:
