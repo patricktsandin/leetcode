@@ -14,12 +14,11 @@ class Solution:
         while list1 and list2:
             if list1.val < list2.val:
                 list3_tail.next = list1
-                list3_tail = list3_tail.next
                 list1 = list1.next
             else:
                 list3_tail.next = list2
-                list3_tail = list3_tail.next
                 list2 = list2.next
+            list3_tail = list3_tail.next
 
         list3_tail.next = list1 or list2
 
