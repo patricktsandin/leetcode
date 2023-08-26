@@ -1,29 +1,26 @@
-from operator import attrgetter
-
 class Solution:
+    """Merges two sorted linked lists in O(n) time and O(1) space."""
     def mergeTwoLists(self, list1, list2):
-        if not list1 or list2:
+        if not (list1 and list2):
             return list1 or list2 or None
 
-        list1_pointer = list1
-        list2_pointer = list2
-        list3_head = None
-        list3_tail = None
+        if list1.val < list2.val:
+            list3_head = list3_tail = list1
+            list1 = list1.next
+        else:
+            list3_head = list3_tail = list2
+            list2 = list2.next
 
-        while True:
-            if list1_pointer.val < list2_pointer.val:
-                if not list3_head:
-                    list3_head = list3_tail = list1_pointer
-                else:
-                    list3_tail.next = list1_pointer
-                    list3_tail = list3_tail.next
-                    list1_pointer = list1_pointer.next
-                    list3_tail.next = None
-            if list2_pointer.val < list1_pointer.val:
-                if not list3_head:
-                    list3_head = list3_tail = list2_pointer
-                else:
-                    list3_tail.next = list2_pointer
-                    list3_tail = list3_tail.next
-                    list2_pointer = list2_pointer.next
-                    list3_tail.next = None
+        while list1 and list2:
+            if list1.val < list2.val:
+                list3_tail.next = list1
+                list3_tail = list3_tail.next
+                list1 = list1.next
+            else:
+                list3_tail.next = list2
+                list3_tail = list3_tail.next
+                list2 = list2.next
+
+        list3_tail.next = list1 or list2
+
+        return list3_head
