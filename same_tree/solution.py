@@ -1,7 +1,7 @@
 class Solution:
     def isSameTree(self, p, q):
         """Return whether two provided binary trees are the same in
-        O(1) space and O(n) time."""
+        O(n) space and O(n) time."""
         return (
             not (p or q)
             or (p and q)
