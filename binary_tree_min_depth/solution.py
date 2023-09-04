@@ -1,5 +1,6 @@
 class Solution:
-    """Get minimum depth of a binary tree in O(n) time and O(n) space."""
+    """Get minimum depth of a binary tree in O(n) time and O(n) space using
+    iterative breadth-first search with a queue."""
     def minDepth(self, root):
         if not root:
             return 0
