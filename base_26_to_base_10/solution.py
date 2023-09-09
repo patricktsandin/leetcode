@@ -6,6 +6,7 @@ class Solution:
         result = []
         power = 0
         while True:
+            # Currently failing on anything that contains a 'Z'.
             base10_digit = (columnNumber % 26**(power + 1)) // 26**power
             if base10_digit:
                 result.insert(0, chr(base10_digit + 64))
