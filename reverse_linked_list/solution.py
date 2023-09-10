@@ -11,7 +11,7 @@ class Solution:
     @staticmethod
     def reverse_list(node1: Optional[ListNode]) -> Optional[ListNode]:
         """
-        Reverses a linked list in linear time and constant space.
+        Reverses a linked list iteratively in linear time and constant space.
         :param node1: Head of a linked list
         :return: Head of reversed linked list
         """
