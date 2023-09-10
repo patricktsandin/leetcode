@@ -3,8 +3,8 @@ from math import log
 class Solution:
     def convertToTitle(self, columnNumber: int) -> str:
         """Converts base base 10 integer to base 26 alphabetic string
-        representation of integer in linear time and space using iteration
-        in O(log n) time and space"""
+        representation of integer in using iteration in O(log n) time and
+        space"""
         result = []
         borrow = 0
         # Find the resultant number's length in digits with a base-26 logarithm
