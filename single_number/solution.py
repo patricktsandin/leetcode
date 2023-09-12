@@ -7,7 +7,7 @@ class Solution:
         """
         Given a list where all elements are duplicates except one, return
         the singular element.  O(1) space and O(n) time, iterative algorithm
-        leveraging sets.
+        leveraging sets.  Beats 97.74% of LeetCoders on memory consumption.
         :param nums: List of integers, all but one duplicated
         :return: Single non-duplicated integer from input list
         """
