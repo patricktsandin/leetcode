@@ -15,7 +15,5 @@ class Solution:
         nums_set = set()
         while nums:
             nums_set.add(nums.pop(0))
-        del nums
         nums_set_sum = sum(nums_set)
-        del nums_set
         return nums_set_sum * 2 - nums_list_sum
