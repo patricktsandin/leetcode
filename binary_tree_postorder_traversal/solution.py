@@ -13,7 +13,8 @@ class TreeNode:
 
 
 class Solution:
-    def postorder_traversal(self, root: Optional[TreeNode]) -> List[int]:
+    @staticmethod
+    def postorder_traversal(root: Optional[TreeNode]) -> List[int]:
         """
         Returns values from a binary tree in the order of discovery given
         a depth-first left-to-right search that does not record the value
