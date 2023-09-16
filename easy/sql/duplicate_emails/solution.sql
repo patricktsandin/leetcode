@@ -13,5 +13,6 @@ select email
 from (
     select email, count(email) as count
     from Person
+    group by email
 ) as counts
 where count > 1;
