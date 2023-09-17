@@ -7,7 +7,8 @@
 -- | temperature   | int     |
 -- +---------------+---------+
 --
--- Write a solution to find all dates' Id with higher temperatures compared to its previous dates (yesterday).
+-- Write a solution to find all dates' Id with higher temperatures compared to
+-- its previous dates (yesterday).
 
 select w2.id
 from Weather as w1
