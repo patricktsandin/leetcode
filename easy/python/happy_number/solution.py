@@ -1,5 +1,5 @@
 class Solution:
-    def isHappy(self, n: int) -> bool:
+    def is_happy(self, n: int) -> bool:
         """
         Return whether a number is happy using iterative algorithm.
         :param n: Potential happy number
