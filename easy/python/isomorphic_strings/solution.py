@@ -18,7 +18,7 @@ class Solution:
     @staticmethod
     def is_isomorphic(s: str, t: str) -> bool:
         """Returns whether two strings are isomorphic using an iterative
-        algorithm."""
+        algorithm in linear time and space."""
         mapping = dict()
         for char1, char2 in zip(s, t):
             if char1 not in mapping.keys():
