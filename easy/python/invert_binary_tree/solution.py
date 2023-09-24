@@ -13,7 +13,7 @@ class Solution:
     """Beats 92.59% of LeetCoders on runtime."""
     def invert_tree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
         """Returns mirrored binary tree in linear time and logarithmic
-        space using recursive algorithm."""
+        space using recursive DFS algorithm."""
         if root:
             root.left = self.invert_tree(root.left)
             root.right = self.invert_tree(root.right)

@@ -13,7 +13,7 @@ class Solution:
     @staticmethod
     def invert_tree(root: Optional[TreeNode]) -> Optional[TreeNode]:
         """Returns mirrored binary tree in linear time and logarithmic
-        space using iterative algorithm."""
+        space using iterative DFS algorithm."""
         stack = [root]
         while stack and root:
             node = stack.pop()
