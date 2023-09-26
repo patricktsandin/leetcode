@@ -5,4 +5,4 @@ class Solution:
     """Returns whether an integer is a power of two"""
     @staticmethod
     def is_power_of_two(n: int) -> bool:
-        return n > 0 and n & (n-1) == 0
+        return not n & (n - 1) and n
