@@ -5,7 +5,7 @@ class Solution:
     @staticmethod
     def is_ugly(n: int) -> bool:
         """Return whether integer is ugly using iterative algorithm."""
-        while n:
+        while n > 0:
             if n % 2 == 0:
                 n //= 2
             elif n % 3 == 0:
