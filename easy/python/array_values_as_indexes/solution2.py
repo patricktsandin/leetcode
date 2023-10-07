@@ -11,21 +11,9 @@ class Solution:
         """Return array where elements are moved to indexes equal
         to themselves."""
         length = len(nums)
-        first_element = nums[0]
-        index = 0
-        while True:
-            last_overwritten_element = nums[index]
-            if last_overwritten_element < 0:
-                if index == length - 1:
-                    index = 0
-                    continue
-                else:
-                    index += 1
-                    continue
-            if index == 0:
-                last_overwritten_element = first_element
-
-            nums[index] = -nums[last_overwritten_element]
-            index = abs(last_overwritten_element)
+        for index, num in enumerate(nums):
+            answer = nums[num] % length
+            nums[index] += answer * length
+        for index in range(length):
+            nums[index] //= length
         return nums
-
