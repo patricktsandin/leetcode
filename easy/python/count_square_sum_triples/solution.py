@@ -5,16 +5,20 @@
 # b, c <= n.
 
 from math import sqrt
+from functools import cache
 
 
 class Solution:
-    @staticmethod
-    def count_triples(n: int) -> int:
+    """Solves using recursive algorithm in exponential time and
+    linear space."""
+    @classmethod
+    @cache
+    def count_triples(cls, n: int) -> int:
+        """Count Pythagorean triples of the form a^2 + b^2 = c^2
+        for all values of c between 1 and c given c as n."""
+        c = n*n
         triples = 0
-        while n > 4:
-            if n % 2 != 0 and sqrt(n**2 - (n - 1)**2).is_integer():
+        for i in range(9, c//2):
+            if sqrt(i).is_integer() and sqrt(c - i).is_integer():
                 triples += 2
-            if n > 5 and sqrt(n**2 - (n - 2)**2).is_integer():
-                triples += 2
-            n -= 1
-        return triples
+        return triples + (cls.count_triples(n - 1) if n > 5 else 0)
