@@ -10,6 +10,6 @@ class Solution:
     """Solves using iterative algorithm in linear time and space."""
 
     @staticmethod
-    def numIdenticalPairs(nums: List[int]) -> int:
+    def num_identical_pairs(nums: List[int]) -> int:
         """Count number of 'good pairs' in a list."""
         return sum(map(lambda n: comb(n, 2), Counter(nums).values()))
