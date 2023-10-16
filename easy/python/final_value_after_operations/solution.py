@@ -18,7 +18,7 @@ class Solution:
 
     @staticmethod
     def final_value_after_operations(operations: List[str]) -> int:
-        """Applies operations to variable initialized to 0"""
+        """Applies operations to variable initialized to 0."""
 
         x = 0
         operator_from_operation = {
