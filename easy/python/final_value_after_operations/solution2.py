@@ -10,7 +10,6 @@ the final value of X after performing all the operations.
 """
 
 from typing import List
-from operator import add, sub
 
 
 class Solution:
