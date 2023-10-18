@@ -13,9 +13,9 @@ from typing import List
 
 
 class Solution:
-    """Solves with iterative algorithm in linear time and space."""
+    """Solves with iterative algorithm in linear time and constant space."""
 
     @staticmethod
     def final_value_after_operations(operations: List[str]) -> int:
         """Applies operations to variable initialized to 0."""
-        return sum([1 if "+" in n else -1 for n in operations])
+        return sum(1 if "+" in n else -1 for n in operations)
