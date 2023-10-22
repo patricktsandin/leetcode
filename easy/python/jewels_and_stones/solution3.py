@@ -10,7 +10,7 @@ from 'A'.
 
 
 class Solution:
-    """Solves in linear time and space."""
+    """Solves in linear time and constant space."""
 
     @staticmethod
     def num_jewels_in_stones(jewels: str, stones: str) -> int:
