@@ -13,6 +13,7 @@ from unittest import TestCase
 
 class Solution:
     """Solves iteratively in linear time and space."""
+
     @staticmethod
     def interpret(command: str) -> str:
         """Returns translated string"""
