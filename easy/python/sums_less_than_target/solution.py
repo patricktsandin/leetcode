@@ -6,10 +6,11 @@ return the number of pairs (i, j) where 0 <= i < j < n and nums[i] + nums[j]
 
 from unittest import TestCase
 from typing import List
+from itertools import islice
 
 
 class Solution:
-    """Solves iteratively in linear space and exponential time."""
+    """Solves iteratively in constant space and exponential time."""
 
     @staticmethod
     def count_pairs(numbers: List[int], target: int) -> int:
@@ -22,7 +23,7 @@ class Solution:
 
         pair_count = 0
         for i, number1 in enumerate(numbers):
-            for _, number2 in enumerate(numbers[i + 1:]):
+            for _, number2 in enumerate(islice(iter(numbers), i+1, None)):
                 if number1 + number2 < target:
                     pair_count += 1
         return pair_count
