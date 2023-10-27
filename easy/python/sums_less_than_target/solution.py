@@ -23,7 +23,7 @@ class Solution:
 
         pair_count = 0
         for i, number1 in enumerate(numbers):
-            for _, number2 in enumerate(islice(iter(numbers), i+1, None)):
+            for number2 in islice(iter(numbers), i+1, None):
                 if number1 + number2 < target:
                     pair_count += 1
         return pair_count
