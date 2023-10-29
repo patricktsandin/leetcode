@@ -29,9 +29,10 @@ class Solution:
         while high_pointer > low_pointer:
             if numbers[high_pointer] + numbers[low_pointer] >= target:
                 high_pointer -= 1
+                pair_count += low_pointer
             else:
                 low_pointer += 1
-            pair_count += low_pointer
+                pair_count += 1
         pair_count += comb(low_pointer, 2)
         return pair_count
 
