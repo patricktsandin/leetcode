@@ -10,7 +10,7 @@ from math import comb
 
 
 class Solution:
-    """Solves iteratively in constant space and exponential time."""
+    """Solves iteratively in constant space and O(n log n) time."""
 
     @staticmethod
     def count_pairs(numbers: List[int], target: int) -> int:
