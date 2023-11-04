@@ -12,6 +12,8 @@ class Solution:
     @staticmethod
     def subtract_product_and_sum(number: int) -> int:
         """Returns difference of product and sum of integers."""
+        assert number > 1
+
         product = 1
         sum_ = 0
         while number:
