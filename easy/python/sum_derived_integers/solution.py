@@ -17,6 +17,8 @@ class Solution:
 
     @staticmethod
     def minimum_sum(number: int) -> int:
+        """Calculate the minimum sum of two integers derived from the
+        digits of an input integer."""
         digits = sorted(list(str(number)))
         operand_1 = int(''.join(digits[::2]))
         operand_2 = int(''.join(digits[1::2]))
