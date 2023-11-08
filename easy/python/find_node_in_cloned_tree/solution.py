@@ -37,11 +37,10 @@ class Solution:
         :param target: Node to seek out in cloned tree
         :return: Node from cloned tree matching target
         """
-        value = target.val
         stack = [cloned]
         while stack:
             node = stack.pop()
-            if node.val != value:
+            if node.val != target.val:
                 children = list(filter(None, [node.left, node.right]))
                 stack.extend(children)
             else:
