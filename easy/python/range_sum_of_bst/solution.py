@@ -36,7 +36,7 @@ class Solution:
             node = stack.pop()
             if low <= node.val <= high:
                 sum_ += node.val
-            stack.extend(list(filter(None, [node.left, node.right])))
+            stack.extend(child for child in [node.left, node.right] if child)
         return sum_
 
 
