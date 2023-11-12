@@ -7,6 +7,7 @@ low, high].
 
 from unittest import TestCase
 from collections import deque
+from typing import Dict
 
 
 class TreeNode:
@@ -19,7 +20,7 @@ class TreeNode:
 
 
 class Solution:
-    """Solves iteratively in linear time and logarithmic space."""
+    """Solves recursively in linear time and space."""
 
     def range_sum_bst(self, root: TreeNode, low: int, high: int) -> int:
         """
@@ -33,15 +34,11 @@ class Solution:
         if not root:
             return 0
 
-        sum_ = 0
-
-        if low <= (left := self.range_sum_bst(root.left, low, high)) <= high:
-            sum_ += left
-        if low <= (right := self.range_sum_bst(root.right, low, high)) <= high:
-            sum_ += right
-        if low <= root.val <= high:
-            sum_ += root.val
-        return sum_
+        return (
+            (root.val if low <= root.val <= high else 0)
+            + self.range_sum_bst(root.left, low, high)
+            + self.range_sum_bst(root.right, low, high)
+        )
 
 
 # noinspection DuplicatedCode
@@ -108,7 +105,7 @@ class TestRangeSumBST(TestCase):
                 parents.append(parent.right)
         return root
 
-    def multi_tree_test(self, *, low, high, expected):
+    def multi_tree_test(self, *, low: int, high: int, expected: Dict[str, int]):
         for name, tree in self.TREES.items():
             with self.subTest(name):
                 root = self.create_tree(tree)
