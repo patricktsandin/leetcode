@@ -8,7 +8,6 @@ to right to generate the decompressed list.
 Return the decompressed list.
 
 Constraints:
-
 2 <= nums.length <= 100
 nums.length % 2 == 0
 1 <= nums[i] <= 100
@@ -32,7 +31,7 @@ class Solution:
         assert len(nums) >= 2 and len(nums) % 2 == 0
 
         nums_iterable = iter(nums)
-        for i in range(len(nums) // 2):
+        for _ in range(len(nums) // 2):
             count = next(nums_iterable)
             val = next(nums_iterable)
 
