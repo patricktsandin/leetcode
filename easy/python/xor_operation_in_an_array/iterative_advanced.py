@@ -11,9 +11,9 @@ n == nums.length
 """
 
 
-from unittest import TestCase
 from functools import reduce
 from operator import xor
+from unittest import TestCase
 
 
 class Solution:

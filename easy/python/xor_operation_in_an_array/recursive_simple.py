@@ -25,7 +25,7 @@ class Solution:
         if n < 1:
             return 0
 
-        return (start + 2 * (n-1)) ^ self.xor_operation(n-1, start)
+        return (start + 2 * (n - 1)) ^ self.xor_operation(n - 1, start)
 
 
 class TestXOROperation(TestCase):
